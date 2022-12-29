@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# single-perceptron
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an [Create React App ](https://github.com/facebookincubator/create-react-app) project specifically designed to demonstrate the power of a single Perceptron in Machine Learning.
 
-## Available Scripts
+### [Demo](https://mmajdanski.github.io/date-idea-generator/)
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+1. Clone this repo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`https://github.com/mmajdanski/date-idea-generator.git`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. To run, go to project folder and run
 
-### `npm test`
+`$ npm install`
+or
+`$ yarn install` (if you are using yarn)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Now start dev server by running -
 
-### `npm run build`
+`$ npm start`
+or
+`$ yarn start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. If the browser does not automatically for any reason visit - http://localhost:3000/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For more create-react-app commands refer `package.json`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Code structure
 
-### `npm run eject`
+### Components
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The code consists of three main files: `/src/App.tsx` (as our main component) and `/src/compnents/IdeaGenerator.tsx` (for all of the idea Generator Logic and handling) and `/src/compnents/Ideapicker.tsx` (to init what data we are working with)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### This example should be used for demonstration purposes only. Feel free to modify the code for the behavior you want.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Recommended Resources
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Official Facebook Documentation on React](https://reactjs.org/docs/getting-started.html)
 
-## Learn More
+## For any updates to the repo, please visit the changelog
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Located [here](https://github.com/mmajdanski/date-idea-generator/blob/master/CHANGELOG.md).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Something Missing or Incorrect?
+
+File an issue [here](https://github.com/mmajdanski/date-idea-generator/issues).
