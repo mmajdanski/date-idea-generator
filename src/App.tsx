@@ -1,6 +1,7 @@
 import React from "react";
-import "./App.css";
 import { useState } from "react";
+import IdeaGenerator from "./components/IdeaGenerator";
+import IdeaPicker from "./components/IdeaPicker";
 
 const dateIdeas = [
   "Go for a hike in a nearby park or trail",
@@ -57,63 +58,18 @@ const restIdeas = [
 ];
 
 function App() {
-  const [dateIdea, setDateIdea] = useState("");
-  const [restIdea, setRestIdea] = useState("");
-  const [currentIdeaGen, setCurrentIdeaGen] = useState("");
-
-  const handleButtonClick = (randomIdeaArray: string[]) => {
-    // Select a random date idea from the array
-    const randomIndex = Math.floor(Math.random() * randomIdeaArray.length);
-    const randomIdea = randomIdeaArray[randomIndex];
-
-    // Remove the selected date idea from the array
-    randomIdeaArray.splice(randomIndex, 1);
-
-    if (currentIdeaGen === "date") setDateIdea(randomIdea);
-    if (currentIdeaGen === "rest") setRestIdea(randomIdea);
-  };
+  const [selectedIdeaGen, setSelectedIdeaGen] = useState("");
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      {currentIdeaGen !== "" ? (
-        <button
-          className="w-48 h-48 px-4 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700"
-          onClick={() => {
-            if (currentIdeaGen === "date") handleButtonClick(dateIdeas);
-            if (currentIdeaGen === "rest") handleButtonClick(restIdeas);
-          }}
-        >
-          <span className="text-3xl font-bold text-center mt-4 leading-none break-words font-fancy fas fa-heart">
-            Get
-            <br />
-            {currentIdeaGen === "date" && "Date"}
-            {currentIdeaGen === "rest" && "Restaurant"}
-            <br />
-            Idea
-            <br />
-          </span>
-        </button>
-      ) : (
-        <div className="">
-          <h2 className="flex flex-row justify-center mb-8 text-2xl">What are you picking today?</h2>
-          <button
-            className="w-36 h-12 px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 text-lg mr-4"
-            onClick={() => setCurrentIdeaGen("date")}
-          >
-            <span className="text-xl font-bold text-center mt-4 leading-none break-words font-fancy fas fa-heart">Date</span>
-          </button>
-          <button
-            className="w-36 h-12 px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700"
-            onClick={() => setCurrentIdeaGen("rest")}
-          >
-            <span className="text-xl font-bold text-center mt-4 leading-none break-words font-fancy fas fa-heart">Restaurant</span>
-          </button>
+      {selectedIdeaGen !== "" ? (
+        <div>
+          {selectedIdeaGen === "Date" && <IdeaGenerator ideaArray={dateIdeas} label="Date" />}
+          {selectedIdeaGen === "Restaurant" && <IdeaGenerator ideaArray={restIdeas} label="Restaurant" />}
         </div>
+      ) : (
+        <IdeaPicker setSelectedIdeaGen={setSelectedIdeaGen} />
       )}
-      {currentIdeaGen === "date" && <span> {`${dateIdeas.length} ideas remaining`}</span>}
-      {currentIdeaGen === "rest" && <span> {`${restIdeas.length} ideas remaining`}</span>}
-      {dateIdea && <p className="text-3xl font-bold underline text-center mt-8">{dateIdea}</p>}
-      {restIdea && <p className="text-3xl font-bold underline text-center mt-8">{restIdea}</p>}
     </div>
   );
 }
