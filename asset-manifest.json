@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/date-idea-generator/static/css/main.4fc1aef0.css",
-    "main.js": "/date-idea-generator/static/js/main.9284715f.js",
+    "main.css": "/date-idea-generator/static/css/main.8b140453.css",
+    "main.js": "/date-idea-generator/static/js/main.549ba84e.js",
     "static/js/787.fb96ce58.chunk.js": "/date-idea-generator/static/js/787.fb96ce58.chunk.js",
     "index.html": "/date-idea-generator/index.html",
-    "main.4fc1aef0.css.map": "/date-idea-generator/static/css/main.4fc1aef0.css.map",
-    "main.9284715f.js.map": "/date-idea-generator/static/js/main.9284715f.js.map",
+    "main.8b140453.css.map": "/date-idea-generator/static/css/main.8b140453.css.map",
+    "main.549ba84e.js.map": "/date-idea-generator/static/js/main.549ba84e.js.map",
     "787.fb96ce58.chunk.js.map": "/date-idea-generator/static/js/787.fb96ce58.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fc1aef0.css",
-    "static/js/main.9284715f.js"
+    "static/css/main.8b140453.css",
+    "static/js/main.549ba84e.js"
   ]
 }
